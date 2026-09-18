@@ -1,0 +1,10 @@
+load R1 1 -- load value 1 to ram 1
+load R2 1 -- load value 1 to ram 2
+
+loop:  
+    add R1 R2 R3 -- add ram 1 and ram 2 and save it to ram 3
+    mov R2 R1 -- should move ram 2 to ram 1 but the hardware needs more work
+    mov R3 R2 -- move ram 3 to ram 2
+    print R2 -- print ram 2 to screen
+-- comment on empty line
+jump loop
